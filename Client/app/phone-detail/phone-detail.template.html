@@ -1,0 +1,140 @@
+<h1>{{$ctrl.phone.Name}}</h1>
+<img ng-if="$ctrl.loading === true" src="../img/loading.gif"/>
+
+<div class="phone-images">
+    <img ng-src="{{img}}" class="phone"
+         ng-class="{selected: img === $ctrl.mainImageUrl}"
+         ng-repeat="img in $ctrl.phone.Images" />
+</div>
+
+<p style="margin-left: 470px">{{$ctrl.phone.Description}}</p>
+
+<ul class="phone-thumbs">
+  <li ng-repeat="img in $ctrl.phone.Images">
+    <img ng-src="{{img}}" ng-click="$ctrl.setImage(img)" ng-Dblclick="$ctrl.onDblclick(img)"/>
+  </li>
+</ul>
+
+<ul class="specs"> 
+    <li>
+        <span>Availability and Networks</span>
+        <dl>
+            <dt>Availability</dt>
+            <dd ng-repeat="availability in $ctrl.phone.Availabilities">{{availability}}</dd>
+        </dl>
+    </li>
+    
+    <li>
+        <span>Battery</span>
+        <dl>
+            <dt>Type</dt>
+            <dd>{{$ctrl.phone.BatteryType}}</dd>
+            <dt>Talk Time</dt>
+            <dd>{{$ctrl.phone.BatteryTalkTime}}</dd>
+            <dt>Standby time (max)</dt>
+            <dd>{{$ctrl.phone.BatteryStandbyTime}}</dd>
+        </dl>
+    </li>
+  
+    <li>
+        <span>Storage and Memory</span>
+        <dl>
+            <dt>RAM</dt>
+            <dd>{{$ctrl.phone.StorageRAM}} MB </dd>
+            <dt>Internal Storage</dt>
+            <dd>{{$ctrl.phone.StorageFlash}} MB </dd>
+        </dl>
+    </li>
+  
+    <li>
+        <span>Connectivity</span>
+        <dl>
+            <dt>Network Support</dt>
+            <dd>{{$ctrl.phone.ConnectivityCell}}</dd>
+            <dt>WiFi</dt>
+            <dd>{{$ctrl.phone.ConnectivityWiFi}}</dd>
+            <dt>Bluetooth</dt>
+            <dd>{{$ctrl.phone.ConnectivityBluetooth}}</dd>
+            <dt>Infrared</dt>
+            <dd>{{$ctrl.phone.ConnectivityInfrared | checkmark}}</dd>
+            <dt>GPS</dt>
+            <dd>{{$ctrl.phone.ConnectivityGPS | checkmark}}</dd>
+        </dl>
+    </li>
+  
+    <li>
+        <span>Android</span>
+        <dl>
+            <dt>Platrofm type</dt>
+            <dd>{{$ctrl.phone.PlatformType}}</dd>
+            <dt>Version</dt>
+            <dd>{{$ctrl.phone.PlatrormVersion}}</dd>
+            <dt>UI</dt>
+            <dd>{{$ctrl.phone.PlatformUI}}</dd>
+        </dl>
+    </li>
+  
+    <li>
+        <span>Size and Weight</span>
+        <dl>
+            <dt>Width</dt>
+            <dd>{{$ctrl.phone.Width}}(mm)</dd>
+            <dt>Height</dt>
+            <dd>{{$ctrl.phone.Height}}(mm)</dd>
+            <dt>Depth</dt>
+            <dd>{{$ctrl.phone.Depth}}(mm)</dd>
+            <dt>Weight</dt>
+            <dd>{{$ctrl.phone.Weight}}(g)</dd>
+        </dl>
+    </li>
+  
+    <li>
+        <span>Display</span>
+        <dl>
+            <dt>Screen size</dt>
+            <dd>{{$ctrl.phone.DisplayScreenSize}}</dd>
+            <dt>Screen resolution</dt>
+            <dd>{{$ctrl.phone.DisplayScreenResolution}}</dd>
+            <dt>Touch screen</dt>
+            <dd>{{$ctrl.phone.DisplayTouchScreen | checkmark}}</dd>
+        </dl>
+    </li>
+    
+    <li>
+        <span>Hardware</span>
+        <dl>
+            <dt>CPU</dt>
+            <dd>{{$ctrl.phone.HardwareCPU}}</dd>
+            <dt>USB</dt>
+            <dd>{{$ctrl.phone.HardwareUSB}}</dd>
+            <dt>Audio / headphone jack</dt>
+            <dd>{{$ctrl.phone.HardwareAudioJack}}</dd>
+            <dt>FM Radio</dt>
+            <dd>{{$ctrl.phone.HardwareFMRadio | checkmark}}</dd>
+            <dt>Accelerometer</dt>
+            <dd>{{$ctrl.phone.HardwareAccelerometer | checkmark}}</dd>
+            <dt>Physical Keyboard</dt>
+            <dd>{{$ctrl.phone.HardwarePhysicalKeyboard | checkmark}}</dd>
+        </dl>
+    </li>
+  
+    <li>
+        <span>Camera</span>
+        <dl>
+            <dt>Primary</dt>
+            <dd>{{$ctrl.phone.CameraPrimary}} megapixels</dd>
+            <dt>Features</dt>
+            <dd ng-repeat="features in $ctrl.phone.CameraFeatures">{{features}}</dd>
+        </dl>
+    </li>
+  
+    <li>
+        <span>Additional Features</span>
+        <dd>{{$ctrl.phone.AdditionalFeatures}}</dd>
+    </li>
+</ul>
+
+<ul class="nav nav-pills" style="margin-top: 30px">
+  <li role="presentation" class="active"><a href="#!/phones">Return to main</a></li>
+  <li role="presentation" class="active"><a href="#!/phones/edit/{{$ctrl.phoneEditID}}">Edit</a></li>
+</ul>

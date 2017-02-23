@@ -1,0 +1,182 @@
+<h1><b>{{$ctrl.phone.Name}}</b></h1>
+ 
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Name</span>
+  <input type="text" class="form-control" placeholder="Name" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.Name" >
+</div>
+    
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Availability and Networks</span>
+  <input class="form-control" placeholder="Availability(to add more than one, use ','(comma))" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.Availabilities" ng-list>
+</div>
+    
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Battery type</span>
+  <input type="text" class="form-control" placeholder="Battery type" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.BatteryType">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Battery talk</span>
+  <input type="text" class="form-control" placeholder="Battery talk" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.BatteryTalkTime">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Battery standby time (max)</span>
+  <input type="text" class="form-control" placeholder="Battery standby time (max)" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.BatteryStandbyTime">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Storage and Memory (RAM): <code>{{$ctrl.phone.StorageRAM}}</code> MB </span>
+  <input type="range" class="form-control" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.StorageRAM" min="{{64}}"  max="{{20000}}" required>
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Storage and Memory (Internal Storage): <code>{{$ctrl.phone.StorageFlash}}</code> MB </span>
+  <input type="range" class="form-control" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.StorageFlash" min="{{64}}"  max="{{128000}}" required>
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Network Support</span>
+  <input type="text" class="form-control" placeholder="Network Support" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.ConnectivityCell">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">WiFi</span>
+  <input type="text" class="form-control" placeholder="WiFi" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.ConnectivityWiFi">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Bluetooth</span>
+  <input type="text" class="form-control" placeholder="Bluetooth" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.ConnectivityBluetooth">
+</div>
+
+<div class="input-group input-group-sm" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Infrared</span>
+  <input style="margin-top: 10px; margin-left:5px" type="checkbox" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.ConnectivityInfrared">{{$ctrl.phone.ConnectivityInfrared | checkmark}}
+</div>
+
+<div class="input-group input-group-sm" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">GPS</span>
+  <input style="margin-top: 10px; margin-left:5px" type="checkbox" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.ConnectivityGPS">{{$ctrl.phone.ConnectivityGPS | checkmark}}
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Platrofm type</span>
+  <input type="text" class="form-control" placeholder="Platrofm type" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.PlatformType">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Version</span>
+  <input type="text" class="form-control" placeholder="Version" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.PlatrormVersion">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">UI</span>
+  <input type="text" class="form-control" placeholder="UI" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.PlatformUI">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Width (mm)</span>
+  <input type="number" class="form-control" placeholder="Width (mm)" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.Width">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Height (mm)</span>
+  <input type="number" class="form-control" placeholder="Height (mm)" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.Height">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Depth (mm)</span>
+  <input type="number" class="form-control" placeholder="Depth (mm)" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.Depth">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Weight (g)</span>
+  <input type="number" class="form-control" placeholder="Weight (mm)" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.Weight">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Screen size</span>
+  <input type="text" class="form-control" placeholder="Screen size" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.DisplayScreenSize">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Screen resolution</span>
+  <input type="text" class="form-control" placeholder="Screen resolution" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.DisplayScreenResolution">
+</div>
+
+<div class="input-group input-group-sm" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Touch screen</span>
+  <input style="margin-top: 10px; margin-left:5px" type="checkbox" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.DisplayTouchScreen">{{$ctrl.phone.DisplayTouchScreen | checkmark}}
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">CPU</span>
+  <input type="text" class="form-control" placeholder="CPU" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.HardwareCPU">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">USB</span>
+  <input type="text" class="form-control" placeholder="USB" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.HardwareUSB">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Audio / headphone jack</span>
+  <input type="text" class="form-control" placeholder="Audio / headphone jack" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.HardwareAudioJack">
+</div>
+
+<div class="input-group input-group-sm" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">FM Radio</span>
+  <input style="margin-top: 10px; margin-left:5px" type="checkbox" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.HardwareFMRadio">{{$ctrl.phone.HardwareFMRadio | checkmark}}
+</div>
+
+<div class="input-group input-group-sm" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Accelerometer</span>
+  <input style="margin-top: 10px; margin-left:5px" type="checkbox" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.HardwareAccelerometer">{{$ctrl.phone.HardwareAccelerometer | checkmark}}
+</div>
+
+<div class="input-group input-group-sm" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Physical Keyboard</span>
+  <input style="margin-top: 10px; margin-left:5px" type="checkbox" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.HardwarePhysicalKeyboard">{{$ctrl.phone.HardwarePhysicalKeyboard | checkmark}}
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Camera primary (megapixels)</span>
+  <input type="number" class="form-control" placeholder="Camera primary (megapixels)" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.CameraPrimary">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Camera features</span>
+  <input class="form-control" placeholder="Camera features(to add more than one, use ','(comma))" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.CameraFeatures" ng-list>
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Additional Features</span>
+  <input type="text" class="form-control" placeholder="Additional Features" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.AdditionalFeatures">
+</div>
+
+<div class="input-group" style="margin-top: 10px">
+  <span class="input-group-addon" id="sizing-addon2">Description</span>
+  <textarea type="text" class="form-control" placeholder="Description" aria-describedby="sizing-addon2" ng-model="$ctrl.phone.Description"></textarea>
+</div>
+    
+<ul class="phone-thumbs" style="margin-top: 30px">
+  <li ng-repeat="img in $ctrl.phone.Images">
+    <img ng-src="{{img}}" ng-click="$ctrl.removeImage(img)"/>
+  </li>
+</ul>
+
+<div style="margin-top: 30px">
+    <div id="result"></div>
+    <input style="float:left" type="file" id="file1" name="file" multiple ng-files="$ctrl.getTheFiles($files)" />
+
+    <input type="button" ng-click="$ctrl.uploadFiles()" value="Upload" />    
+</div>
+    
+<ul class="nav nav-pills" style="margin-top: 30px">
+  <li style="margin-top: 10px" role="presentation" class="active"><a href="#!/phones">Return to main</a></li>
+  <li style="margin-top: 10px" role="presentation" class="active"><a ng-click="$ctrl.btnClick()">Save changes</a></li>
+  <li style="margin-left: 10px" role="presentation" class="active">
+      <img ng-if="$ctrl.loading === true" src="../img/loading_data.gif"/> 
+  </li>
+</ul>
